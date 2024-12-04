@@ -12,7 +12,7 @@ namespace A3
         public string Position { get; set; }
         public double PointsPerGame { get; set; }
         public string Photo { get; set; }
-        public Color TeamColor { get; set; }
+        public Color TeamColor { get; set; } // Field to set colors for teams, so that new teams can have custom colors
     }
 
     public class Players
@@ -27,7 +27,7 @@ namespace A3
 
         public void playerData()
         {
-            // Create a dictionary to map teams to colors
+            // Dictionary for mapping teams to colors
             Dictionary<string, Color> teamColors = new Dictionary<string, Color>
             {
                 { "Paris Saint-Germain", Color.LightCoral },
@@ -47,7 +47,7 @@ namespace A3
                 Position = "Forward",
                 PointsPerGame = 30.5,
                 Photo = $"..\\..\\..\\Images\\Lionel Messi.jpg",
-                TeamColor = teamColors["Paris Saint-Germain"] 
+                TeamColor = teamColors["Paris Saint-Germain"] // Use team names as key for dictionary to access the color for that team
             });
 
             player.Add(new Player
